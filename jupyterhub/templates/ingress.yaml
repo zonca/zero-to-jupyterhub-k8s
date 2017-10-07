@@ -17,7 +17,7 @@ spec:
     - host: jup.k8s.optiputer.net
       http:
         paths:
-          - path: /*
+          - path: /
             backend:
               serviceName: proxy-public
               servicePort: 80
