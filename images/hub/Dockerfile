@@ -42,7 +42,7 @@ RUN pip3 install --no-cache-dir \
          mwoauth==0.3.2 \
          cryptography==2.0.3
 
-RUN pip3 --no-cache-dir install git+https://github.com/jupyterhub/oauthenticator@80676a3e
+RUN pip3 --no-cache-dir install git+https://github.com/jupyterhub/oauthenticator@0.7.1
 RUN pip3 --no-cache-dir install git+https://github.com/jupyterhub/kubespawner@1a27374
 
 ADD jupyterhub_config.py /srv/jupyterhub_config.py
