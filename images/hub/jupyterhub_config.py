@@ -249,3 +249,5 @@ if cmd:
 extra_config_path = '/etc/jupyterhub/config/hub.extra-config.py'
 if os.path.exists(extra_config_path):
     load_subconfig(extra_config_path)
+
+c.Spawner.default_url = '/lab'
