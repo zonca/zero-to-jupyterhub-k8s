@@ -30,7 +30,7 @@ RUN adduser --disabled-password \
 
 ARG JUPYTERHUB_VERSION=0.8
 
-RUN pip3 install https://github.com/zonca/jupyterhub/archive/fix_cookie_cilogon.zip
+RUN pip3 install jupyterhub==$JUPYTERHUB_VERSION
 
 RUN pip3 install --no-cache-dir \
          statsd==3.2.1 \
@@ -43,7 +43,7 @@ RUN pip3 install --no-cache-dir \
          mwoauth==0.3.2 \
          cryptography==2.0.3
 
-RUN pip3 --no-cache-dir install git+https://github.com/jupyterhub/oauthenticator@0.7.1
+RUN pip3 --no-cache-dir install git+https://github.com/jupyterhub/oauthenticator@8ebad0b0075990ab6f
 RUN pip3 --no-cache-dir install git+https://github.com/jupyterhub/kubespawner@1a27374
 
 ADD jupyterhub_config.py /srv/jupyterhub_config.py
